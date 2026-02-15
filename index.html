@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Gerbert</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .emoji { font-size: 4rem; margin-bottom: 1rem; }
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .status {
+            color: #4ade80;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        .tip {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🦴</div>
+        <h1>Gerbert</h1>
+        <p class="subtitle">Tap the widget below to start talking</p>
+        <p class="status">● Online</p>
+        <p class="tip">Voice-powered by ElevenLabs. Just speak naturally.</p>
+    </div>
+
+    <script>
+        // ElevenLabs Conversational AI Widget
+        const script = document.createElement('script');
+        script.src = 'https://elevenlabs.io/convai-widget/index.js';
+        script.async = true;
+        document.head.appendChild(script);
+
+        script.onload = () => {
+            const widget = document.createElement('elevenlabs-convai');
+            widget.setAttribute('agent-id', 'agent_6701khhm74y1ey6as8v4fbrr7e22');
+            document.body.appendChild(widget);
+        };
+    </script>
+</body>
+</html>
